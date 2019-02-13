@@ -20,4 +20,4 @@ exports.run = async (client, message, args) => {
         message.edit(embed)
     })
 
-} // Now, we can test it!
+} 
