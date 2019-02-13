@@ -1,15 +1,14 @@
-// Require Packages - You will need to install them.
+// Require Packages
 const Discord = require("discord.js");
-const client = new Discord.Client(); // This uses the discord.js package, in order to setup a client
+const client = new Discord.Client(); 
 
 // Constant Variables
-const prefix = '-'; // This can be chnaged to anything you want
+const prefix = '-'; 
 const ownerID = '393788668701179914'; // This will be used in future videos
 
 
 // Listener Events
 client.on('message', message => {
-    // This runs whenever a message is received
 
     // Variables
     let args = message.content.slice(prefix.length).trim().split(' ');
@@ -19,8 +18,8 @@ client.on('message', message => {
     // args contains everything following that and splits it into an array by slices
 
     // Return Statements
-    if (message.author.bot) return; // This will ignore all bots
-    if (!message.content.startsWith(prefix)) return; // This will run if the message doesn't starts with the prefix
+    if (message.author.bot) return; 
+    if (!message.content.startsWith(prefix)) return; 
 
     // Command Handler
     try {
@@ -33,12 +32,10 @@ client.on('message', message => {
             ownerID: ownerID
         }
 
-        let commandFile = require(`./commands/${cmd}.js`); // This will require a file in the commands folder
-        commandFile.run(client, message, args, ops); // This will pass three variables into the file
+        let commandFile = require(`./commands/${cmd}.js`); 
+        commandFile.run(client, message, args, ops); 
 
-        // We can now create a basic ping-pong command for staters.
-
-    } catch (e) { // This will catch any errors, either withing the code or if the command doesn't exist/ wasn't found.
+    } catch (e) { 
         console.log(e.stack);
     }
 
@@ -48,4 +45,4 @@ client.on('message', message => {
 client.on('ready', () => console.log('Bot Launched!'));
 
 // Discord Login 
-client.login('NTM0NDM5OTk4MDc0NzgxNzIw.DzeWiw.3ivbhbTvQWIzPn3QBq0udIh9frw'); // This will be your token instead of TOKEN
+client.login('TOKEN'); // This will be your token instead of TOKEN
