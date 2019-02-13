@@ -5,26 +5,25 @@ const ms = require('ms');
 // Command Handler - You can use your own
 exports.run = async (client, message, args) => {
 
-    let reminderTime = args[0]; // Variable
+    let reminderTime = args[0]; 
     if (!reminderTime) {
-        let embed = new Discord.RichEmbed() // Forming new Embed (Use Discord.MessageEmbed() for master version)
-            .setTitle('Proper Usage') // This sets the title of the emebd
-            .setDescription(`\`<prefix>remindme 15min any text or code\``) // This sends a message for the command usage & example
+        let embed = new Discord.RichEmbed() 
+            .setTitle('Proper Usage') 
+            .setDescription(`\`<prefix>remindme 15min any text or code\``)
 
-        return message.channel.send(embed) // This sends the embed 
-
+        return message.channel.send(embed) 
     }
 
-    let reminder = args.slice(1).join(" "); // This slices the args
+    let reminder = args.slice(1).join(" "); 
 
-    let remindEmbed = new Discord.RichEmbed() // Same as above
+    let remindEmbed = new Discord.RichEmbed() 
         .setColor('#ffffff')
         .setAuthor(`${message.author.username}`, message.author.displayAvatarURL)
-        .addField('Reminder', `\`\`\`${reminder}\`\`\``) // Shows the remind from the user
-        .addField('Time', `\`\`\`${reminderTime}\`\`\``) // Displays the Time
+        .addField('Reminder', `\`\`\`${reminder}\`\`\``) 
+        .addField('Time', `\`\`\`${reminderTime}\`\`\``) 
         .setTimestamp();
 
-    message.channel.send(remindEmbed); // Sends the embed
+    message.channel.send(remindEmbed); 
 
     setTimeout(function() {
         let remindEmbed = new Discord.RichEmbed()
@@ -36,4 +35,4 @@ exports.run = async (client, message, args) => {
             message.channel.send(remindEmbed);
     }, ms(reminderTime));
 
-} // Now, lets test it!
+} 
