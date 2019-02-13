@@ -18,4 +18,4 @@ exports.run = async (client, message, args) => {
     // Send embed
     message.channel.send(embed);
 
-} // Now, we can test it!
+} 
