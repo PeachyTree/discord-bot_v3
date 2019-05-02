@@ -1,6 +1,6 @@
 // We require 2 packages - discord.js & moment
 // `npm i moment` 
-const Discord = require('discord.js'); // We require this because of the embed
+const Discord = require('discord.js'); 
 const moment = require('moment');
 
 exports.run = async (client, message, args) => {
@@ -24,7 +24,6 @@ exports.run = async (client, message, args) => {
         .addField('Nickname:', `${member.nickname !== null ? `${member.nickname}` : 'None'}`, true)
         .addField('Created at:', `${moment.utc(user.createdAt).format('dddd, MMMM Do YYYY, HH:mm:ss')}`, true)
         .addField('Joined server:', `${moment.utc(member.joinedAt).format('dddd, MMMM Do YYYY, HH:mm:ss')}`, true)
-        //.addField('Client:', `${user.client}`, true) // Turns out this doesn't work - We don't need this.
         .addField('Status:', `${user.presence.status}`, true)
         .addField('Game:', `${user.presence.game ? user.presence.game.name : 'None'}`, true)
         .addField('Roles:', member.roles.map(roles => `${roles.name}`).join(', '), true)
