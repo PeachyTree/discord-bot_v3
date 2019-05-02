@@ -4,7 +4,6 @@ const ascii = require('ascii-art');
 // Command Handler - You can use your own
 exports.run = (client, message, args, ops) => {
 
-    // First, we need to generate the font
     ascii.font(args.join(' '), 'Doom', function(rendered) {
 
         // The `rendered` variable now contains out output
