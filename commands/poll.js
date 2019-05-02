@@ -3,8 +3,6 @@ const Discord = require('discord.js');
 
 exports.run = async (client, message, args, tools) => {
 
-    // This will contain some extra things
-
     // Role Verification (Optional)
     if (!message.member.roles.find(r => r.name === 'roleName')) return message.channel.send('This requires the role: roleName');
 
