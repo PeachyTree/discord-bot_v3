@@ -1,4 +1,3 @@
-// Purge Command - we require 1 package
 const Discord = require('discord.js');
 
 exports.run = async (client, message, args) => {
