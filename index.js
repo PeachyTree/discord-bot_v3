@@ -1,11 +1,10 @@
 // Require Packages
-const Discord = require("discord.js");
+const Discord = require('discord.js');
 const client = new Discord.Client(); 
 
 // Constant Variables
-const prefix = '-'; 
-const ownerID = '393788668701179914'; // This will be used in future videos
-
+const prefix = process.env.PREFIX; 
+const ownerID = process.env.OWNER; 
 
 // Listener Events
 client.on('message', message => {
@@ -45,4 +44,4 @@ client.on('message', message => {
 client.on('ready', () => console.log('Bot Launched!'));
 
 // Discord Login 
-client.login('TOKEN'); // This will be your token instead of TOKEN
+client.login(process.env.TOKEN); 
