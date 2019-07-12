@@ -1,7 +1,6 @@
 // `npm i ascii-art`
 const ascii = require('ascii-art');
 
-// Command Handler - You can use your own
 exports.run = (client, message, args, ops) => {
 
     ascii.font(args.join(' '), 'Doom', function(rendered) {
