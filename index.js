@@ -1,12 +1,15 @@
-// Require Packages
+// Required Packages - You need to install them (by using npm)
+require('dotenv').config();
 const Discord = require('discord.js');
+
+// Our client - some people call it bot.
 const client = new Discord.Client(); 
 
 // Constant Variables
-const prefix = process.env.PREFIX; 
+const prefix = process.env.PREFIX; // Remember to create a .env file!
 const ownerID = process.env.OWNER; 
 
-// Listener Events
+// Message Event
 client.on('message', message => {
 
     // Variables
