@@ -1,5 +1,5 @@
 const math = require('mathjs');
-const Discord = require('discord.js');
+const {RichEmbed} = require('discord.js');
 
 exports.run = (client, message, args, tools) => {
 
@@ -8,15 +8,14 @@ exports.run = (client, message, args, tools) => {
     try {
         resp = math.eval(args.join(' '));
     } catch (e) {
-        return message.channel.send('Sorry, please input a valid calculation.');
+        return message.channel.send('Please input a valid calculation.');
     }
 
-    const embed = new Discord.RichEmbed()
+    const embed = new RichEmbed()
         .setColor(0xffffff)
         .setTitle('Math Calculation')
         .addField('Input', `\`\`\`js\n${args.join('')}\`\`\``)
         .addField('Output', `\`\`\`js\n${resp}\`\`\``)
-
-    message.channel.send(embed);
+    message.channel.send({embed});
 
 }
