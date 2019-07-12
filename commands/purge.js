@@ -1,5 +1,3 @@
-const Discord = require('discord.js');
-
 exports.run = async (client, message, args) => {
 
     if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('You must specify the number of text to delete');
