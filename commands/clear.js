@@ -1,3 +1,5 @@
+// Copyright (c) 2020 Azura Apple. All rights reserved. MIT license.
+
 exports.run = async (client, message, args) => {
 
     if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('You must specify the number of text to delete');
