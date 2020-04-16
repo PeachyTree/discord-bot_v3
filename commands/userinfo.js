@@ -1,3 +1,5 @@
+// Copyright (c) 2020 Azura Apple. All rights reserved. MIT license.
+
 const {RichEmbed} = require('discord.js'); 
 const moment = require('moment');
 
