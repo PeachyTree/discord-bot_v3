@@ -1,3 +1,5 @@
+// Copyright (c) 2020 Azura Apple. All rights reserved. MIT license.
+
 const math = require('mathjs');
 const {RichEmbed} = require('discord.js');
 
