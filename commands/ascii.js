@@ -1,3 +1,5 @@
+// Copyright (c) 2020 Azura Apple. All rights reserved. MIT license.
+
 // `npm i ascii-art`
 const ascii = require('ascii-art');
 
